@@ -1,0 +1,25 @@
+.container {
+    .createTask {
+        display: grid;
+        grid-template-columns: 3fr 1fr min-content;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+
+        @media (max-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr min-content;
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 0px;
+
+            &Title {
+                grid-area: 1 / 1 / 2 / 3;
+            }
+        }
+
+        &Btn {
+            align-self: center;
+        }
+    }
+}
